@@ -10,3 +10,5 @@ src-git freifunk https://github.com/freifunk/openwrt-packages.git
 #src-link custom /usr/src/openwrt/custom-feed
 
 src-git helloworld https://github.com/klever1988/helloworld
+src-git infinityfreedom https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom
+src-git edge https://github.com/garypang13/luci-theme-edge
