@@ -62,7 +62,7 @@ jobs:
           REPO_BRANCH: master
         run: |
           git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
-          mv ./feeds.confi.default ./openwrt/feeds.confi.default
+          mv ./feeds.conf.default ./openwrt/feeds.conf.default
           cd openwrt
           sed -i 's/#src-git helloworld/src-git helloworld/g' ./feeds.conf.default
 
