@@ -15,8 +15,8 @@ on:
     branches:
       - master
 
-  # schedule:
-  #   - cron: 0 0 12 * * ?
+  schedule:
+    - cron: 0 0 12 * * ?
 
   #watch:
   #  types: [started]
@@ -65,6 +65,12 @@ jobs:
           git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
           cd openwrt
           sed -i 's/#src-git helloworld/src-git helloworld/g' ./feeds.conf.default
+
+      - name: Update feeds.conf.default
+        env:
+          FEEDS_CONF: feeds.conf.default
+        run: |
+          [ -e $FEEDS_CONF ] && mv $FEEDS_CONF openwrt/feeds.conf.default
 
       - name: Update feeds.conf.default
         env:

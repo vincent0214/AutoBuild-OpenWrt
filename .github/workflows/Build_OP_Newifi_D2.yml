@@ -15,8 +15,8 @@ on:
     branches:
       - master
 
-  # schedule:
-  #   - cron: 0 0 12 * * ?
+  schedule:
+    - cron: 0 0 12 * * ?
 
   #watch:
   #  types: [started]
@@ -81,7 +81,7 @@ jobs:
 
       - name: Configuration Customization - Build_Newifi_D2
         env:
-          CONFIG_FILE: "Newifi_D2.config"
+          CONFIG_FILE: "./my-config/Newifi_D2.config"
         run: |
           [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
           chmod +x ./customize.sh && ./customize.sh
