@@ -16,7 +16,7 @@ on:
       - master
 
   schedule:
-    - cron: 0 0 12 * * ?
+   - cron: 0 7 * * * 
 
   #watch:
   #  types: [started]
@@ -71,6 +71,7 @@ jobs:
           FEEDS_CONF: feeds.conf.default
         run: |
           [ -e $FEEDS_CONF ] && mv $FEEDS_CONF openwrt/feeds.conf.default
+          cat openwrt/feeds.conf.default
 
       - name: Update & Install feeds
         working-directory: ./openwrt
