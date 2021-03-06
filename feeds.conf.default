@@ -14,4 +14,4 @@ src-git helloworld https://github.com/fw876/helloworld
 
 #主题
 src-git infinityfreedom https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom
-src-git edge https://github.com/garypang13/luci-theme-edge.git
+src-git edge https://github.com/garypang13/luci-theme-edge.git;18.06
